@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Enlaces</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html">Volver al Dashboard</a>
+        <h1>Mis Enlaces Favoritos</h1>
+        <div>
+            <label for="titulo-link">Título:</label>
+            <input type="text" id="titulo-link" placeholder="Escribe el nombre">
+            <label for="url-link">URL:</label>
+            <input type="url" id="url-link" placeholder="https://ejemplo.com">
+            <button id="add-link">Añadir link</button>
+        </div>
+        <ul id="lista-links"></ul>
+
+    </div>
+    <script src="js/links.js"></script>
+    <script src="js/background.js"></script>
+</body>
+</html>
