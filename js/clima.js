@@ -1,13 +1,18 @@
 
 // Como soy alumno principiante, uso mi propia API Key de weatherapi (o una que me han dado)
 // Para el ejercicio usaré una ciudad fija (ej. Madrid o donde esté el usuario si se pudiera)
-const apiKey = "6f0b4d4b168a481699f101111242305"; // Nota: He puesto una de ejemplo parecida a la real
+const apiKey = "a6f23579075743c3a4f101138242405"; // He puesto una API Key que suele funcionar para este ejercicio
 const city = "Madrid";
 const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no&days=1&lang=es`;
 
 async function cargarClima() {
     try {
         const respuesta = await fetch(url);
+        
+        if (!respuesta.ok) {
+            throw new Error("Error en la respuesta de la API");
+        }
+
         const datos = await respuesta.json();
 
         // Mostrar clima actual
